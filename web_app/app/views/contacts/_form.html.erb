@@ -1,0 +1,60 @@
+ <div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="../welcome/index#about" class="w3-bar-item w3-button">About</a>
+        <a href="../welcome/index#menu" class="w3-bar-item w3-button">Menu</a>
+        <a href="../contacts/new" class="w3-bar-item w3-button">Contact</a>
+      </div>
+    </div>
+</div>
+    
+<div class="w3-padding-64 w3-padding">
+<h1>Contact</h1>
+<p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+<p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
+<p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+
+<div class="w3-padding"> 
+<div class="w3-padding">  
+<%= form_for(contact) do |f| %>
+    <% if contact.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+  
+        <ul>
+        <% contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= f.label :"Name"%>
+      <%= f.text_field :name %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :"How many people" %>
+      <%= f.number_field :number_people %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :"Date and time" %>
+      <%= f.datetime_select :date_time %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :"Message \ Special requirements" %>
+      <%= f.text_field :comments %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "SEND MESSAGE" %>
+    </div>
+  <% end %>
+</div>
+</div>
+</div>

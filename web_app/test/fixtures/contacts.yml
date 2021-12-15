@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  number_people: 1
+  date_time: 2021-12-15 15:23:20
+  comments: MyString
+
+two:
+  name: MyText
+  number_people: 1
+  date_time: 2021-12-15 15:23:20
+  comments: MyString
